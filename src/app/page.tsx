@@ -8,7 +8,6 @@ import axios from "axios";
 async function loadTasks() {
   //! opcion 1 con axios a una ruta
   const tasks = await axios.get("http://localhost:3000/api/tasks");
-  // console.log(data);
 
   //! opcion 2 con prisma
   // const tasks = await prisma.task.findMany();
