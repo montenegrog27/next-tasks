@@ -16,17 +16,14 @@ async function loadTasks() {
   return tasks.data;
 }
 
-async function HomePage({ daysOffset }: { daysOffset: number }) {
-  interface Props {
-    tasks: Task;
-  }
+async function HomePage() {
   const tasks = await loadTasks();
 
   return (
     <section className="   flex justify-center items-center ">
       <div className="grid  grid-cols-1 w-screen">
         <h2 className=" text-4xl flex justify-center">
-          <Date daysOffset={0} />
+          <Date />
         </h2>
         <TaskList tasks={tasks} />
       </div>
