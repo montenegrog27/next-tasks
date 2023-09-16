@@ -13,14 +13,17 @@ function TaskList({ tasks }: { tasks: Task[] }) {
 
   const tasksYesterday = tasks.filter(
     (task) =>
-      new Date(task.createdAt) >= yesterday &&
+      // new Date(task.createdAt) >= yesterday &&
       new Date(task.createdAt).toLocaleDateString() < today
   );
   const tasksTomorrow = tasks.filter(
     (task) =>
-      new Date(task.createdAt) >= tomorrow &&
+      // new Date(task.createdAt) >= tomorrow &&
       new Date(task.createdAt).toLocaleDateString() > today
   );
+  console.log("tareas", tasks);
+  console.log("tareas de hoy", today);
+
   console.log("de mañana???", tasksTomorrow);
 
   return (
